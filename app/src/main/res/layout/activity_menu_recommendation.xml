@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controller.MenuRecommendationActivity">
+
+    <ImageView
+        android:id="@+id/top_big_background"
+        android:layout_width="500dp"
+        android:layout_height="150dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/top_small_background" />
+
+    <ImageView
+        android:id="@+id/recommendationImageLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/small_logo" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="500dp"
+        android:layout_height="730dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/menu_recommendation_layout"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recommendationImageLogo">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            app:srcCompat="@drawable/nearby_restaurant" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/menuRecommendationRecyclerView"
+            android:layout_width="1055px"
+            android:layout_height="1900px"
+            android:background="@color/white" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/menuRecommendationButton"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="60dp"
+        android:stateListAnimator="@null"
+        android:background="@drawable/icon_ionic_ios_arrow_round_back"
+        app:layout_constraintBottom_toBottomOf="@+id/top_big_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.921"
+        app:layout_constraintStart_toEndOf="@+id/recommendationImageLogo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
